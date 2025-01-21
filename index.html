@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날씨API</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h2>현재 날씨</h2> -->
+    <div class="container">
+      <div class="icon_box">
+        <img id="icon" />
+        <img src="" id="imgWrap" />
+        <div class="tem">
+          <span id="temp"></span>
+          <span>˚</span>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          위치 <br />
+          <span id="place"></span>
+        </li>
+        <li>
+          풍속<br />
+          <span id="wind"></span>
+          <span class="wi">m/s</span>
+        </li>
+        <li>
+          날씨설명<br />
+          <span id="des"></span>
+        </li>
+      </ul>
+      <div class="btn">
+        <button id="seoul">서울</button>
+        <button id="busan">부산</button>
+        <button id="jeju">제주</button>
+      </div>
+    </div>
+
+    <script src="custom.js"></script>
+  </body>
+</html>

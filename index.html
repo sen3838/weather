@@ -7,38 +7,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <h2>현재 날씨</h2> -->
-    <div class="container">
-      <div class="icon_box">
-        <img id="icon" />
-        <img src="" id="imgWrap" />
-        <div class="tem">
+    <div class="day_info">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
+
+    <section class="icon_box">
+      <h2>
+        W<span>eather</span> i<span>n</span> Y<span>our</span> C<span>ity</span>
+      </h2>
+      <img id="icon" />
+      <img src="" id="imgWrap" />
+      <div class="tem">
+        <div class="temp_present">
           <span id="temp"></span>
-          <span>˚</span>
         </div>
+        <ul class="minmax">
+          <li>
+            최저<br />
+            <span id="temp_min"></span>
+          </li>
+          <li>
+            최고<br />
+            <span id="temp_max"></span>
+          </li>
+        </ul>
       </div>
 
-      <ul>
-        <li>
-          위치 <br />
-          <span id="place"></span>
-        </li>
-        <li>
-          풍속<br />
-          <span id="wind"></span>
-          <span class="wi">m/s</span>
-        </li>
-        <li>
-          날씨설명<br />
-          <span id="des"></span>
-        </li>
-      </ul>
+      <div class="info_box">
+        <ul class="info">
+          <li>
+            위치 <br />
+            <span id="place"></span>
+          </li>
+          <li>
+            날씨설명<br />
+            <span id="des"></span>
+          </li>
+          <li>
+            풍속<br />
+            <span id="wind"></span>
+          </li>
+          <li>
+            습도<br />
+            <span id="humidity"></span>
+          </li>
+        </ul>
+      </div>
       <div class="btn">
         <button id="seoul">서울</button>
         <button id="busan">부산</button>
         <button id="jeju">제주</button>
       </div>
-    </div>
+    </section>
 
     <script src="custom.js"></script>
   </body>

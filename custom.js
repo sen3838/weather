@@ -1,6 +1,39 @@
+document.addEventListener("DOMContentLoaded", () => {
+  let clock = document.querySelector("#clock");
+  let date = document.querySelector("#date");
+  start = () => {
+    let today = new Date();
+    let hrs = today.getHours();
+    let mins = today.getMinutes();
+    let sec = today.getSeconds();
+
+    let hrs2 = hrs < 12 ? "AM" : "PM";
+    // 12시간제로 변환
+    // hrs = hrs % 12 || 12;
+    hrs = hrs > 9 ? hrs : `0${hrs}`;
+    mins = mins > 9 ? mins : `0${mins}`;
+    sec = sec > 9 ? sec : `0${sec}`;
+
+    clock.innerHTML = `<p>${hrs}:${mins} <span class="ampm">${hrs2}</span></p>`;
+
+    // 날짜 표시 (년, 월, 일, 요일)
+    let year = today.getFullYear(); // 년도
+    let month = today.getMonth() + 1; // 월 (0부터 시작하므로 1을 더함)
+    let day = today.getDate(); // 일
+    let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let dayOfWeek = weekdays[today.getDay()]; // 요일 (0:일요일, 1:월요일, ... 6:토요일)
+
+    date.textContent = `${year}. ${month}. ${day} ${dayOfWeek}`;
+  };
+  setInterval(start, 1000);
+});
+
 let temp = document.querySelector("#temp");
+let temp_min = document.querySelector("#temp_min");
+let temp_max = document.querySelector("#temp_max");
 let place = document.querySelector("#place");
 let wind = document.querySelector("#wind");
+let humidity = document.querySelector("#humidity");
 let des = document.querySelector("#des");
 let iconBox = document.querySelector("#icon");
 let seoulBtn = document.querySelector("#seoul");
@@ -17,9 +50,13 @@ const getWeather = async () => {
   //   console.log(response);
   let data = await response.json();
   console.log(data);
-  temp.textContent = data.main.temp;
+
+  temp.textContent = `${data.main.temp}˚`;
+  temp_min.textContent = `${data.main.temp_min}˚`;
+  temp_max.textContent = `${data.main.temp_max}˚`;
+  humidity.textContent = `${data.main.humidity}%`;
   place.textContent = data.name;
-  wind.textContent = data.wind.speed;
+  wind.textContent = `${data.wind.speed} m/s`;
   des.textContent = data.weather[0].description;
 
   //아이콘
@@ -39,16 +76,36 @@ const getWeather = async () => {
     sun = "img/sun_kj.png";
   } else if (icon == "02d") {
     sun = "img/02d.png";
+  } else if (icon == "02n") {
+    sun = "img/02d.png";
   } else if (icon == "03d") {
+    sun = "img/04d.png";
+  } else if (icon == "03n") {
     sun = "img/04d.png";
   } else if (icon == "04d") {
     sun = "img/04d.png";
+  } else if (icon == "04n") {
+    sun = "img/04d.png";
   } else if (icon == "09d") {
+    sun = "img/09d.png";
+  } else if (icon == "09n") {
+    sun = "img/09d.png";
+  } else if (icon == "10d") {
+    sun = "img/09d.png";
+  } else if (icon == "10n") {
     sun = "img/09d.png";
   } else if (icon == "11d") {
     sun = "img/11d.png";
+  } else if (icon == "11n") {
+    sun = "img/11d.png";
   } else if (icon == "13d") {
     sun = "img/13d.png";
+  } else if (icon == "13n") {
+    sun = "img/13d.png";
+  } else if (icon == "50d") {
+    sun = "img/50d.png";
+  } else if (icon == "50n") {
+    sun = "img/50d.png";
   }
 
   imgWrap.src = sun;

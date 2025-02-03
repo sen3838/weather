@@ -71,37 +71,37 @@ const getWeather = async () => {
   //내가 원하는 이미지넣기
   let sun;
   if (icon == "01d") {
-    sun = "img/sun_kj.png";
+    sun = "img/sun.png";
   } else if (icon == "01n") {
-    sun = "img/sun_kj.png";
+    sun = "img/moon.png";
   } else if (icon == "02d") {
-    sun = "img/02d.png";
+    sun = "img/suncloud.png";
   } else if (icon == "02n") {
-    sun = "img/02d.png";
+    sun = "img/mooncloud.png";
   } else if (icon == "03d") {
-    sun = "img/04d.png";
+    sun = "img/cloud.png";
   } else if (icon == "03n") {
-    sun = "img/04d.png";
+    sun = "img/cloud.png";
   } else if (icon == "04d") {
-    sun = "img/04d.png";
+    sun = "img/cloud.png";
   } else if (icon == "04n") {
-    sun = "img/04d.png";
+    sun = "img/cloud.png";
   } else if (icon == "09d") {
-    sun = "img/09d.png";
+    sun = "img/rain.png";
   } else if (icon == "09n") {
-    sun = "img/09d.png";
+    sun = "img/rain.png";
   } else if (icon == "10d") {
-    sun = "img/09d.png";
+    sun = "img/sunrain.png";
   } else if (icon == "10n") {
-    sun = "img/09d.png";
+    sun = "img/nightrain.png";
   } else if (icon == "11d") {
-    sun = "img/11d.png";
+    sun = "img/thunder.png";
   } else if (icon == "11n") {
-    sun = "img/11d.png";
+    sun = "img/thunder.png";
   } else if (icon == "13d") {
-    sun = "img/13d.png";
+    sun = "img/snow.png";
   } else if (icon == "13n") {
-    sun = "img/13d.png";
+    sun = "img/snow.png";
   } else if (icon == "50d") {
     sun = "img/50d.png";
   } else if (icon == "50n") {

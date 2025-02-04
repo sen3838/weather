@@ -83,9 +83,9 @@ const getWeather = async () => {
   } else if (icon == "03n") {
     sun = "img/cloud.png";
   } else if (icon == "04d") {
-    sun = "img/cloud.png";
+    sun = "img/darkcloud.png";
   } else if (icon == "04n") {
-    sun = "img/cloud.png";
+    sun = "img/darkcloud.png";
   } else if (icon == "09d") {
     sun = "img/rain.png";
   } else if (icon == "09n") {
